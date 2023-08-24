@@ -24,8 +24,8 @@ let octalValue: number = 0o410;
 String Types
 When you want to use textual data, string types are used and get denoted by the keyword string. Like JavaScript, TypeScript also uses double quotes (") and single quotes (') to surround the string value.
 
-let firstName: string = "Kunal";
-let lastName: string = 'Chowdhury';
+let firstName: string = "Kunal"; 
+let lastName: string = 'Chowdhury'; 
 Boolean Types
 To use boolean data types in TypeScript, for declaring variables, use the boolean keyword.
 
@@ -55,13 +55,13 @@ Never Types
 The never type represents the data type of values that never occur. For example, the following function that always throws an exception can never return a value.
 
 function throwError(message: string): never {
-throw new Error(message);
+    throw new Error(message);
 }
 Union Types
 A union type is a type formed from two or more other types, representing values that may be any one of those types. We refer to each of these types as the union’s members.
 
 function printId(id: number | string) {
-console.log("Your ID is: " + id);
+  console.log("Your ID is: " + id);
 }
 printId(101);
 printId("202");
@@ -91,18 +91,18 @@ Aliases Type
 We’ve been using object types and union types by writing them directly in type annotations. This is convenient, but it’s common to want to use the same type more than once and refer to it by a single name.
 
 type Point = {
-x: number;
-y: number;
+  x: number;
+  y: number;
 };
 type ID = number | string;
 Extending a type via intersections
 
 type Animal = {
-name: string
+  name: string
 }
 
-type Bear = Animal & {
-honey: boolean
+type Bear = Animal & { 
+  honey: boolean 
 }
 
 const bear = getBear();
@@ -112,20 +112,20 @@ Interfaces
 An interface declaration is another way to name an object type.
 
 interface Point {
-x: number;
-y: number;
+  x: number;
+  y: number;
 }
 Extending an interface
 
 interface Animal {
-name: string
+  name: string
 }
 
 interface Bear extends Animal {
-honey: boolean
+  honey: boolean
 }
 
-const bear = getBear()
+const bear = getBear() 
 bear.name
 bear.honey
 Assertions Type
